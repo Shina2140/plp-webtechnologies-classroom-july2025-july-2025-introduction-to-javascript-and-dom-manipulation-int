@@ -103,7 +103,7 @@ button {
 // ===============================
 // Part 1: Variables & Conditionals
 // ===============================
-let userName = "Student";
+let userName = "Shina";
 let isLoggedIn = true;
 
 // Simple conditional
@@ -169,13 +169,4 @@ document.getElementById("loop-btn").addEventListener("click", function() {
 document.getElementById("color-btn").addEventListener("click", function() {
   document.getElementById("main-title").style.color = "green";
 });
-
-
-## Outcome
-
-* Clear understanding of variables, conditionals, functions, loops, and DOM methods
-* Code readability and comments explaining your logic
-* Effective use of functions and loops to reduce repetition
-* DOM manipulation that improves interactivity
-* Clean structure and consistent indentation
 
