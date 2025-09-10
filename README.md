@@ -53,6 +53,124 @@ Each part of the assignment should be clearly commented and organized.
 
 ---
 
+project-folder/
+  ├── index.html
+  ├── style.css
+  └── script.js
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beginner JavaScript Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="main-title">Welcome to My Beginner Project</h1>
+
+  <!-- Buttons to trigger JavaScript functions -->
+  <button id="greet-btn">Click to Greet</button>
+  <button id="loop-btn">Show Loop Output</button>
+  <button id="color-btn">Change Title Color</button>
+
+  <!-- Area to show outputs -->
+  <div id="output"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 18px;
+  color: darkblue;
+}
+
+// ===============================
+// Part 1: Variables & Conditionals
+// ===============================
+let userName = "Student";
+let isLoggedIn = true;
+
+// Simple conditional
+if (isLoggedIn) {
+  console.log("Welcome, " + userName + "!");
+} else {
+  console.log("Please log in.");
+}
+
+// ===============================
+// Part 2: Functions
+// ===============================
+
+// Function 1: Display a greeting
+function greetUser(name) {
+  return "Hello, " + name + "! Welcome to the project.";
+}
+
+// Function 2: Add two numbers
+function addNumbers(a, b) {
+  return a + b;
+}
+
+// ===============================
+// Part 3: Loops
+// ===============================
+
+// Example 1: For loop
+function showNumbers() {
+  let output = "";
+  for (let i = 1; i <= 5; i++) {
+    output += "Number: " + i + "<br>";
+  }
+  return output;
+}
+
+// Example 2: While loop
+function showEvenNumbers() {
+  let output = "";
+  let num = 2;
+  while (num <= 10) {
+    output += "Even Number: " + num + "<br>";
+    num += 2;
+  }
+  return output;
+}
+
+// ===============================
+// Part 4: DOM Interactions
+// ===============================
+
+// DOM 1: Greet button
+document.getElementById("greet-btn").addEventListener("click", function() {
+  document.getElementById("output").innerHTML = greetUser(userName);
+});
+
+// DOM 2: Loop button
+document.getElementById("loop-btn").addEventListener("click", function() {
+  document.getElementById("output").innerHTML = showNumbers() + showEvenNumbers();
+});
+
+// DOM 3: Change title color
+document.getElementById("color-btn").addEventListener("click", function() {
+  document.getElementById("main-title").style.color = "green";
+});
+
+
 ## Outcome
 
 * Clear understanding of variables, conditionals, functions, loops, and DOM methods
